@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'master' }
     environment {
-        DOCKERHUB_CREDENTIALS=credentials('dockerhub-vakhobdevops')
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub-fazilatdevops')
     }
 
     stages {
@@ -26,13 +26,13 @@ pipeline {
 
         stage('ImageTag') {
             steps {
-                sh 'docker tag devops14:latest vakhobdevops/devops14-docker:version2'
+                sh 'docker tag devops14:latest fazilat/devops14-docker:version2'
             }
         }
 
         stage('Push') {
             steps {
-                sh 'docker push vakhobdevops/devops14-docker:version2'
+                sh 'docker push fazilat/devops14-docker:version2'
             }
         }
     }
