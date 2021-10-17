@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'master' }
     environment {
-        DOCKERHUB_CREDENTIALS=credentials('dockerhub-fazilatdevops')
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub-fazilat')
     }
 
     stages {
